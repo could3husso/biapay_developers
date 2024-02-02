@@ -1,0 +1,128 @@
+site_name: HELP CENTER
+
+site_description: >-
+
+  La documentation de BIAPAY est une ressource destinée aux nouveaux utilisateurs.
+  de differents backgrounds lors de différentes operations sur notre platforme.
+
+# Repository
+repo_name: BIAPAY
+repo_url: https://github.com/could3husso/biapay-dev.git
+
+# Copyright
+copyright: Copyright &copy; 2023 BIAPAY Team
+
+theme: 
+  logo: img/biapay-1.png
+  language: fr
+  name: material
+  features: 
+    - navigation.top
+    - toc.integrate
+    - navigation.tabs
+    - navigation.path
+    - navigation.sections
+    - content.action.edit
+    - content.action.view
+    - content.tabs.link
+    - content.code.annotate
+    - content.code.copy
+    - navigation.footer
+  palette: 
+    scheme : green
+
+extra_css: 
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/feedback.js
+
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # - minify:
+  #     minify_html: true
+
+# Customization
+extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/twitter
+      link: https://github.com/squidfunk
+    - icon: fontawesome/brands/instagram
+      link: https://gitter.im/squidfunk/mkdocs-material
+    - icon: fontawesome/brands/linkedin
+      link: https://twitter.com/squidfunk
+    - icon: fontawesome/brands/github
+      link: https://github.com/squidfunk
+  
+
+# Page tree
+nav:
+  # - Home: index.md
+  # - Guides pour débuter:
+  #   - Création des comptes: authentification.md
+  #   - Identification des comptes: identification-clients.md
+  #   - Gestion des comptes: profil.md
+  #   # - Back-office utilisateur: identification-clients.md
+  #   # - Transferts: transferts.md
+  #   # - Passerelle de paiement: passerelle-de-paiemnt.md
+  #   - Boutiques: boutiques.md
+  #   - Pricing: pricing.md
+
+ # - Home: index.md
+  - Guides utilisateur:
+    - Création des comptes: index.md
+    - Identification des comptes: identification-clients.md
+    # -  mdp.md
+    # - Gestion des comptes: profil.md
+    - Boutiques et pdv: boutiques-et-pdv.md
+    - Nos forfaits: nos-forfaits.md
+
+  - Ressources pour Integrateurs:
+    - Prerequis:  modules/index.md
+    - WooCommerce:  modules/woocommerce.md
+    - PrestaShop: modules/prestashop.md
+    - OpenCart: modules/opencart.md
+  - Developers:
+    - faq : developer.md
+
+  #- Ressources developpeur : support-technique.md
+
+markdown_extensions: 
+  - attr_list
+  - md_in_html
+  - def_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      
+    # - Valider son compte : business-kyc.md
+    # - Publishing your site: publishing-your-site.md
+    # - Customization: customization.md
+    # - Browser support: browser-support.md
+    # - Philosophy: philosophy.md
